@@ -1,15 +1,17 @@
 <html>
     <head>
-        <title> Машины </title>
+        <title>машины</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles/main_styles.css')}}">
     </head>
     <body>
-        <h1>Мои любибые машины</h1>
-        <p>здесь я опубликовал свои любимые машины</p>
-        <a href="https://ru.wikipedia.org/wiki/Lamborghini_Veneno">Ламборгини</a>
-        <img src="{{  url_for('static', filename='Ламборгини.jpg')    }}" width="200px"/>
-        <a href="https://ru.wikipedia.org/wiki/Ferrari_Portofino">Ферари</a>
-        <img src="{{  url_for('static', filename='феррари.jpg')    }}" width="200px"/>
-        <a href="https://ru.wikipedia.org/wiki/Bentley_Continental_GT#Second_generation_(2011-present)">Бентли</a>
-        <img src="{{  url_for('static', filename='бентли.jpg')    }}" width="200px"/>
+        <p style="font-size: 28px;">Моя страница</p>
+        <h1 class="centered">Мои любибые машины</h1>
+        <p style="font-size: 40px; width: 50%; display: block; margin-left: auto; margin-right: auto;">здесь я опубликовал свои любимые машины</p>
+        <table>
+        <td><a style="font-size: 28px;"href="{{ url_for('display_sport_cars_list') }}">спорт кары</a>
+        </table>
+        <table>
+        <td><a style="font-size: 28px;"href="{{ url_for('display_not_sport_cars_list') }}">не спорт кары</a>
+        </table>        
     </body> 
 </html>
